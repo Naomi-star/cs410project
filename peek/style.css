@@ -1,0 +1,165 @@
+/* Importing Google font - Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+* {
+    margin: 0; /* Sets margin to 0 for all elements */
+    padding: 0; /* Sets padding to 0 for all elements */
+    box-sizing: border-box; /* Applies box-sizing border-box to all elements */
+    font-family: "Poppins", sans-serif; /* Sets the default font family to Poppins or sans-serif if Poppins is not available */
+}
+
+body {
+    height: 100vh; /* Sets the height of the body to 100% of the viewport height */
+    width: 100%; /* Sets the width of the body to 100% of the viewport width */
+    background-image: url("Pictures/background.jpg"); /* Sets the background image of the body */
+    background-position: center; /* Sets the background image position to center */
+    background-size: cover; /* Sets the background image size to cover the entire viewport */
+}
+
+.title {
+    text-align: center; /* Aligns the content of the header to the center horizontally */
+    position: fixed; /* Fixes the header position */
+    top: 5%; /* Positions the header vertically at 5% from the top */
+    left: 50%; /* Positions the header horizontally at 50% from the left */
+    transform: translate(-50%, -50%); /* Translates the header back by 50% of its own width and height to center it perfectly */
+    width: 100%; /* Makes the header span the entire width of the viewport */
+    z-index: 1000; /* Sets a high z-index to ensure the header appears above other content */
+}
+
+.peek-title {
+    font-size: 3rem; /* Adjust the size of the title as needed */
+    font-weight: bold; /* Makes the title bold */
+    color: #a51111; /* Sets the color of the title text */
+    margin: 0; /* Removes any default margin */
+}
+
+
+/* Additional CSS for login link */
+.login-link {
+    position: fixed; /* Fix the position of the login link */
+    top: 10px; /* Position it 10 pixels from the top */
+    right: 10px; /* Position it 10 pixels from the right */
+    padding: 10px 20px; /* Add padding inside the link */
+    background-color: #ff1900; /* Set background color to blue */
+    color: #fff; /* Set text color to white */
+    text-decoration: none; /* Remove underline from the text */
+    border-radius: 5px; /* Add rounded corners to the link */
+    z-index: 1000; /* Set a high z-index to ensure the link appears above other elements */
+  }
+  
+  /* Styles for hover effect on the login link */
+  .login-link:hover {
+    background-color: #9db29f; /* Change background color to a darker shade of blue on hover */
+  }
+  
+  
+  
+  
+
+/* Styles for the sidebar */
+.sidebar {
+    position: fixed; /* Fixes the sidebar position */
+    top: 0; /* Positions the sidebar at the top of the viewport */
+    left: 0; /* Positions the sidebar at the left of the viewport */
+    width: 110px; /* Sets the initial width of the sidebar */
+    height: 100%; /* Sets the height of the sidebar to 100% of the viewport height */
+    display: flex; /* Displays the sidebar as a flex container */
+    align-items: center; /* Aligns items vertically within the sidebar */
+    flex-direction: column; /* Sets the flex direction to column */
+    background: rgba(255, 255, 255, 0.2); /* Sets the background color with transparency */
+    backdrop-filter: blur(17px); /* Applies a blur filter to the background */
+    --webkit-backdrop-filter: blur(17px); /* Applies a blur filter to the background for WebKit browsers */
+    border-right: 1px solid rgba(255, 255, 255, 0.7); /* Sets a right border for the sidebar */
+    transition: width 0.3s ease; /* Adds a transition effect for width changes */
+}
+
+.sidebar:hover {
+    width: 260px; /* Expands the width of the sidebar on hover */
+}
+
+.sidebar .logo {
+    color: #000; /* Sets the color of the logo text */
+    display: flex; /* Displays the logo as a flex container */
+    align-items: center; /* Aligns items vertically within the logo */
+    padding: 25px 10px 15px; /* Sets padding for the logo */
+}
+
+.logo img {
+    width: 43px; /* Sets the width of the logo image */
+    border-radius: 50%; /* Applies border-radius to create a circular shape */
+}
+
+.logo h2 {
+    font-size: 1.15rem; /* Sets the font size of the logo text */
+    font-weight: 600; /* Sets the font weight of the logo text */
+    margin-left: 15px; /* Sets left margin for the logo text */
+    display: none; /* Hides the logo text by default */
+}
+
+.sidebar:hover .logo h2 {
+    display: block; /* Displays the logo text on hover */
+}
+
+.sidebar .links {
+    list-style: none; /* Removes default list styles */
+    margin-top: 20px; /* Sets top margin for the links list */
+    overflow-y: auto; /* Enables vertical overflow scrolling for the links */
+    scrollbar-width: none; /* Hides the scrollbar */
+    height: calc(100% - 140px); /* Calculates the height of the links list to fit within the sidebar */
+}
+
+.sidebar .links::-webkit-scrollbar {
+    display: none; /* Hides the scrollbar for WebKit browsers */
+}
+
+.links li {
+    display: flex; /* Displays list items as flex containers */
+    border-radius: 4px; /* Applies border-radius to list items */
+    align-items: center; /* Aligns items vertically within list items */
+}
+
+.links li:hover {
+    cursor: pointer; /* Changes cursor to pointer on hover */
+    background: #fff; /* Changes background color on hover */
+}
+
+.links h4 {
+    color: #222; /* Sets the color of the heading text */
+    font-weight: 500; /* Sets the font weight of the heading text */
+    display: none; /* Hides the heading by default */
+    margin-bottom: 10px; /* Adds margin at the bottom of the heading */
+}
+
+.sidebar:hover .links h4 {
+    display: block; /* Displays the heading on hover of the sidebar */
+}
+
+.links hr {
+    margin: 10px 8px; /* Sets margin for the horizontal rule */
+    border: 1px solid #4c4c4c; /* Sets the style, color, and width of the border for the horizontal rule */
+}
+
+.sidebar:hover .links hr {
+    border-color: transparent; /* Changes the color of the border to transparent on hover */
+}
+
+.links li span {
+    padding: 12px 10px; /* Sets padding for the spans within list items */
+}
+
+.links li a {
+    padding: 10px; /* Sets padding for the anchor elements within list items */
+    color: #000; /* Sets the color of the anchor text */
+    display: none; /* Hides the anchor elements by default */
+    font-weight: 500; /* Sets the font weight of the anchor text */
+    white-space: nowrap; /* Prevents wrapping of anchor text */
+    text-decoration: none; /* Removes underline from anchor text */
+}
+
+.sidebar:hover .links li a {
+    display: block; /* Displays the anchor elements on hover of the sidebar */
+}
+
+.links .logout-link {
+    margin-top: 20px; /* Sets top margin for the logout link */
+}
